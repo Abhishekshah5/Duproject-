@@ -1,0 +1,66 @@
+<html lang="en">
+               <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+                <title>Du Parvesh | <%= title %></title>
+               <style>
+                .boxi{
+                  list-style-type: none;
+                  background: white;
+                  border-radius: 5px;
+                  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+                  text-align: start;
+                  margin: 3px;
+                 }
+                 .blogs{
+                   margin: 100px;
+                   padding: 5px;
+                 }
+                 .bog{
+                   margin: 20px;
+                 }
+               </style>
+           
+              </head>
+
+<body>
+  <div class="container bog">
+    <button type="button" class="btn btn-outline-primary"> <a href="/server/college/form">create new</a>  </button>
+  </div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      
+
+  <div class="blogs content">
+    <h2>list of college</h2>
+
+    <% if (blogs.length > 0) { %>
+      <% blogs.forEach(blog => { %>
+        <div class="boxi">
+        
+          <h4 class="title"><%= blog.toJSON().name %></h4>
+          
+          <a href="/server/course/<%= blog.toJSON().name %>"><button type="button" class="btn btn-outline-primary">course</button></a>
+          <a href="/server/cut-off/<%= blog.toJSON().name %>"><button type="button" class="btn btn-outline-secondary">cut-off</button></a>
+          <a href="/server/fees/<%= blog.toJSON().name %>"><button type="button" class="btn btn-outline-success">fees</button></a>
+
+       </div>   
+      <% }) %>
+    <% } else { %>
+      <p>There are no blogs to display...</p>
+    <% } %>
+    
+  </div>
+
+    </div>
+    <div class="col-4">
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

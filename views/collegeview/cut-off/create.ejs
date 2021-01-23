@@ -1,0 +1,399 @@
+<html lang="en">
+<%- include("../head.ejs") %>
+
+<body>
+  <%- include("../nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/server/cut-off/create" method="POST">
+        <div class="form-row">
+                <div class="col-10">
+                        <input type="text" name="link" class="form-control">
+                </div>
+                <div class="col-10">
+                        <select name="category" id="" class="form-control m-2 m-2">
+                                <option value="">Categorey</option>
+                                <option value="General">General</option>                                
+                                <option value="EWS">EWS</option>
+                                <option value="OBC">OBC</option>
+                                <option value="SC">SC</option>
+                                <option value="ST">ST</option>
+                                <option value="PWD">PWD</option>
+                        </select>
+                </div>
+                <div class="col-10">
+                        <Select name="Round" class="form-control m-2 m-2">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                        </Select>
+                </div>
+               
+        
+
+                                        <div class="col-10">
+                                        
+                                        
+                                                <select name="Science[][course]" class="form-control m-2" placeholder="Science">
+                                                <option value="">Science</option>
+                                                <option value="B.Sc. (Gen) Mathematics">B.Sc. (Gen) Mathematics</option>
+                                                <option value="B.Sc (Hon) Instrumentation">B.Sc (Hon) Instrumentation</option>
+                                                <option value="B.Sc (Hon) Anthropology">B.Sc (Hon) Anthropology</option>
+                                                <option value="B.Sc (Hon) Bio-Chemistry">B.Sc (Hon) Bio-Chemistry</option>
+                                                <option value="B.Sc (Hon) Biomedical Science">B.Sc (Hon) Biomedical Science</option>
+                                                <option value="B.Sc (Hon) Botany">B.Sc (Hon) Botany</option>
+                                                <option value="B.Sc (Hon) Chemistry">B.Sc (Hon) Chemistry</option>
+                                                <option value="B.Sc (Hon) Computer Science">B.Sc (Hon) Computer Science</option>
+                                                <option value="B.Sc (Hon) Electronics">B.Sc (Hon) Electronics</option>
+                                                <option value="B.Sc (Hon) Food Technology">B.Sc (Hon) Food Technology</option>
+                                                <option value="B.Sc (Hon) Geology">B.Sc (Hon) Geology</option>
+                                                <option value="B.Sc (Hon) Home Science">B.Sc (Hon) Home Science</option>
+                                                <option value="B.Sc (Hon) Mathematics">B.Sc (Hon) Mathematics</option>
+                                                <option value="B.Sc (Hon) Physics">B.Sc (Hon) Physics</option>
+                                                <option value="B.Sc (Hon) Microbiology">B.Sc (Hon) Microbiology</option>
+                                                <option value="B.Sc (Hon) Polymer Science">B.Sc (Hon) Polymer Science</option>
+                                                <option value="B.Sc (Hon) Biological Science">B.Sc (Hon) Biological Science</option>
+                                                <option value="B.Sc (Hon) Statistics">B.Sc (Hon) Statistics</option>
+                                                <option value="B.Sc (Hon) Zoology">B.Sc (Hon) Zoology</option>
+                                                <option value="B.Sc (Hon) Applied Life Science">B.Sc (Hon) Applied Life Science</option>
+                                                <option value="B.Sc (Hon) Applied Science">B.Sc (Hon) Applied Science</option>
+                                                <option value="B.Sc (Hon) Applied Physical Science">B.Sc (Hon) Applied Physical Science</option>
+                                                <option value="B.Sc (Hon) Applied Physical Science (Analytical Chemistry)">B.Sc (Hon) Applied Physical Science (Analytical Chemistry)</option>
+                                                <option value="B.Sc (Hon) Applied Physical Science (Industrial Chemistry)">B.Sc (Hon) Applied Physical Science (Industrial Chemistry)</option>
+                                                <option value="B.Sc (Hon) Industrial Chemistry">B.Sc (Hon) Industrial Chemistry</option>
+                                                <option value="B.Sc (Hon) Life Sciences">B.Sc (Hon) Life Sciences</option>
+                                                <option value="B.Sc (Hon) Physical Science">B.Sc (Hon) Physical Science</option>
+                                                <option value="B.Sc (Hon) Physical Education and Sports Sciences">B.Sc (Hon) Physical Education and Sports Sciences</option>
+                                                <option value="B.Sc (Hon) Physical Science Computer Science">B.Sc (Hon) Physical Science Computer Science</option>
+                                                <option value="B.Sc (Hon) Physical Science with Chemistry">B.Sc (Hon) Physical Science with Chemistry</option>
+                                                <option value="B.Sc (Hon) Physical Science with Computer">B.Sc (Hon) Physical Science with Computer</option>
+                                                <option value="B.Sc (PEHES)">B.Sc (PEHES)</option>
+                                                <option value="B.Sc. (MT) Radiography">B.Sc. (MT) Radiography</option>
+
+
+
+                                        </select>
+                                        </div>
+
+                                        <div class="col-10">
+                                                <input type="number" name="Science[][marks]" placeholder="marks"  class="form-control m-2">
+                                        </div>
+
+                                        <div class="col-2">
+                                        <button type="button" class="btn m-2 btn-danger" onclick="addscience()">+</button>     
+
+
+                                        </div>
+                                        
+                                        
+
+                                        
+                                        
+                                        
+                                </div>
+                                
+                                <div id="science"></div>
+
+                                <br>
+                                <hr>
+                                <hr>
+                                <div class="form-row">
+                                        <div class="col-10">
+                                        <select name="Commerce[][course]" id="" class="form-control m-2">
+                                        <option value="">commerce</option>
+                                                        
+                                        <option value="B.Com.">B.Com.</option>
+                                        <option value="B.Com. and B.com.(Hons.) (Compulsory Language Courses) in Punjabi">B.Com. and B.com.(Hons.) (Compulsory Language Courses) in Punjabi</option>
+                                        <option value="Philosophy Paper & Political Science Paper">Philosophy Paper & Political Science Paper</option>
+                                        <option value="B.Com. & Compensation Laws">B.Com. & Compensation Laws</option>
+                                        <option value="B.Com. (Hons.)">B.Com. (Hons.)</option>
+                                        <option value="B.Com. and B.Com.(Hons.) (Compulsory Language Courses) in Punjabi">B.Com. and B.Com.(Hons.) (Compulsory Language Courses) in Punjabi</option>
+                                        <option value="Philosophy Paper & Political Science Paper">Philosophy Paper & Political Science Paper</option>
+                                        <option value="B.Com. (Hons.) Corporate Laws">B.Com. (Hons.) Corporate Laws</option>
+
+                                        </select>
+                                
+                                        </div>
+                                        <div class="col-10">
+                                                <input type="number" name="Commerce[][marks]" placeholder="marks"  class="form-control m-2">
+                                        </div>
+                                        <div class="col-2">
+                                        <button type="button" class="btn m-2 btn-warning " onclick="addcommerce()">+</button>
+                                
+
+                                        </div>
+                                </div>
+
+                                        <div id="commerce"></div>
+                                        <hr>
+                                        <hr>
+                                        <div class="form-row">
+                                        <div class="col-10">
+                                        
+                                        <select name="Arts[][course]" id="" class="form-control m-2">
+                                        <option value="">Arts</option>
+                                                        
+                                        <option value="B.A. Programme (Compulsory Language Courses) in Arabic">B.A. Programme (Compulsory Language Courses) in Arabic</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Arabic">B.A. Programme (Discipline Courses) in Arabic</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Buddhist Studies">B.A. Programme (Discipline Courses) in Buddhist Studies</option>
+                                        <option value="B.A. Programme (compulsory Language Course (Assamese, Bengali, etc.)">B.A. Programme (compulsory Language Course (Assamese, Bengali, etc.)</option>
+                                        <option value="B.A. Programme (Discipline Courses (Assamese, Bengali, etc.)">B.A. Programme (Discipline Courses (Assamese, Bengali, etc.)</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Hindi">B.A. Programme (Discipline Courses) in Hindi</option>
+                                        <option value="B.A. Programme (Language Courses) in Hindi">B.A. Programme (Language Courses) in Hindi</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Urdu">B.A. Programme (Discipline Courses) in Urdu</option>
+                                        <option value="B.A. Programme (Language Courses) in Urdu">B.A. Programme (Language Courses) in Urdu</option>
+                                        <option value="B.A. Programme (Language Courses) in Linguistics">B.A. Programme (Language Courses) in Linguistics</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Statistics">B.A. Programme (Discipline Courses) in Statistics</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Operational Research">B.A. Programme (Discipline Courses) in Operational Research</option>
+                                        <option value="B.A. Programme (Discipline and Application Courses) in music">B.A. Programme (Discipline and Application Courses) in music</option>
+                                        <option value="B.A. Programme (Discipline & Language Courses) in Persian">B.A. Programme (Discipline & Language Courses) in Persian</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Philosophy">B.A. Programme (Discipline Courses) in Philosophy</option>
+                                        <option value="B.A Programme (Discipline courses) in Punjabi">B.A Programme (Discipline courses) in Punjabi</option>
+                                        <option value="B.A. Programme (Compulsory Language Courses) in Punjabi">B.A. Programme (Compulsory Language Courses) in Punjabi</option>
+                                        <option value="B.A. Programme (Discipline Courses ) in Sanskrit">B.A. Programme (Discipline Courses ) in Sanskrit</option>
+                                        <option value="B.A. Programme (Compulsory Language Courses) in Sanskrit">B.A. Programme (Compulsory Language Courses) in Sanskrit</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Psychology">B.A. Programme (Discipline Courses) in Psychology</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Mathematics">B.A. Programme (Discipline Courses) in Mathematics</option>
+                                        <option value="B.A. Programme (Application Courses) in Mathematics">B.A. Programme (Application Courses) in Mathematics</option>
+                                        <option value="B.A. Programme (Application and Discipline Courses) in Computer Science">B.A. Programme (Application and Discipline Courses) in Computer Science</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Commerce">B.A. Programme (Discipline Courses) in Commerce</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Physical Education">B.A. Programme (Discipline Courses) in Physical Education</option>
+                                        <option value="B.A. Programme (Application Courses) in Physical Education">B.A. Programme (Application Courses) in Physical Education</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Home Science:- Food Technology, Apparel Design & Construction, Family and Child Welfare, Nutrition & Health Education">B.A. Programme (Discipline Courses) in Home Science:- Food Technology, Apparel Design & Construction, Family and Child Welfare, Nutrition & Health Education</option>
+                                        <option value="B.A. Programme (Application and Foundation Courses)">B.A. Programme (Application and Foundation Courses)</option>
+                                        <option value="B.A. (Programme) Discipline Course in French">B.A. (Programme) Discipline Course in French</option>
+                                        <option value="B.A. (Programme) Discipline Course in German">B.A. (Programme) Discipline Course in German</option>
+                                        <option value="B.A. (Programme) Discipline Course in Spanish">B.A. (Programme) Discipline Course in Spanish</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Sociology">B.A. Programme (Discipline Courses) in Sociology</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Geography">B.A. Programme (Discipline Courses) in Geography</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Political Science">B.A. Programme (Discipline Courses) in Political Science</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Economics">B.A. Programme (Discipline Courses) in Economics</option>
+                                        <option value="B.A. Programme (Discipline Courses) in History">B.A. Programme (Discipline Courses) in History</option>
+                                        <option value="B.A. Programme (Compulsory Language Courses) in English">B.A. Programme (Compulsory Language Courses) in English</option>
+                                        <option value="B.A. Programme (Discipline Courses) in English">B.A. Programme (Discipline Courses) in English</option>
+                                        <option value="B.A. Programme (Compulsory Language Course in Bengali) for course 'B' and 'C'">B.A. Programme (Compulsory Language Course in Bengali) for course 'B' and 'C'</option>
+                                        <option value="B.A. Programme (Compulsory Language Course in Tamil) for course 'B' and 'C'">B.A. Programme (Compulsory Language Course in Tamil) for course 'B' and 'C'</option>
+                                        <option value="B.A. Programme (Compulsory Language Course in Sindhi, Telugu, Assamese and Manipuri) for course 'B' and 'C'">B.A. Programme (Compulsory Language Course in Sindhi, Telugu, Assamese and Manipuri) for course 'B' and 'C'</option>
+                                        <option value="B.A. (Vocational Studies) Programme">B.A. (Vocational Studies) Programme</option>
+                                        <option value="B.A. Functional Hindi for Semester I">B.A. Functional Hindi for Semester I</option>
+                                        <option value="B.A. Programme (Discipline Courses) in Education">B.A. Programme (Discipline Courses) in Education</option>
+                                        </select>
+                                
+
+                                        </div>
+                                        <div class="col-10">
+                                                <input type="number" name="Arts[][marks]" placeholder="marks"  class="form-control m-2">
+                                        </div>
+                                        <div class="col-2">
+                                        <button type="button" class="btn m-2 btn-success  " onclick="addarts()">+</button>
+                                
+
+                                        </div>
+                                        </div>
+                                
+                                        <div id="arts"></div>
+                                        <hr>
+                                        <hr>
+                                
+      
+
+      <br><br>
+      <button type="submit " class="btn m-2 btn-success"> Submit</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+        </form>
+
+
+
+
+
+        
+     
+
+
+
+
+
+   
+  </div>
+
+  
+  
+  
+<script>
+        var sci = 1;
+        var com=1;
+        var arts=1;
+      
+        function addscience() {
+                
+                var div = document.createElement('div');
+                div.className = 'participante';
+                div.innerHTML = `
+                <div class="col-10">
+                <select name="Science[][course]" class="form-control m-2" placeholder="Science">
+                  <option value="">Science</option>
+                <option value="B.Sc. (Gen) Mathematics">B.Sc. (Gen) Mathematics</option>
+                <option value="B.Sc (Hon) Instrumentation">B.Sc (Hon) Instrumentation</option>
+                <option value="B.Sc (Hon) Anthropology">B.Sc (Hon) Anthropology</option>
+                <option value="B.Sc (Hon) Bio-Chemistry">B.Sc (Hon) Bio-Chemistry</option>
+                <option value="B.Sc (Hon) Biomedical Science">B.Sc (Hon) Biomedical Science</option>
+                <option value="B.Sc (Hon) Botany">B.Sc (Hon) Botany</option>
+                <option value="B.Sc (Hon) Chemistry">B.Sc (Hon) Chemistry</option>
+                <option value="B.Sc (Hon) Computer Science">B.Sc (Hon) Computer Science</option>
+                <option value="B.Sc (Hon) Electronics">B.Sc (Hon) Electronics</option>
+                <option value="B.Sc (Hon) Food Technology">B.Sc (Hon) Food Technology</option>
+                <option value="B.Sc (Hon) Geology">B.Sc (Hon) Geology</option>
+                <option value="B.Sc (Hon) Home Science">B.Sc (Hon) Home Science</option>
+                <option value="B.Sc (Hon) Mathematics">B.Sc (Hon) Mathematics</option>
+                <option value="B.Sc (Hon) Physics">B.Sc (Hon) Physics</option>
+                <option value="B.Sc (Hon) Microbiology">B.Sc (Hon) Microbiology</option>
+                <option value="B.Sc (Hon) Polymer Science">B.Sc (Hon) Polymer Science</option>
+                <option value="B.Sc (Hon) Biological Science">B.Sc (Hon) Biological Science</option>
+                <option value="B.Sc (Hon) Statistics">B.Sc (Hon) Statistics</option>
+                <option value="B.Sc (Hon) Zoology">B.Sc (Hon) Zoology</option>
+                <option value="B.Sc (Hon) Applied Life Science">B.Sc (Hon) Applied Life Science</option>
+                <option value="B.Sc (Hon) Applied Science">B.Sc (Hon) Applied Science</option>
+                <option value="B.Sc (Hon) Applied Physical Science">B.Sc (Hon) Applied Physical Science</option>
+                <option value="B.Sc (Hon) Applied Physical Science (Analytical Chemistry)">B.Sc (Hon) Applied Physical Science (Analytical Chemistry)</option>
+                <option value="B.Sc (Hon) Applied Physical Science (Industrial Chemistry)">B.Sc (Hon) Applied Physical Science (Industrial Chemistry)</option>
+                <option value="B.Sc (Hon) Industrial Chemistry">B.Sc (Hon) Industrial Chemistry</option>
+                <option value="B.Sc (Hon) Life Sciences">B.Sc (Hon) Life Sciences</option>
+                <option value="B.Sc (Hon) Physical Science">B.Sc (Hon) Physical Science</option>
+                <option value="B.Sc (Hon) Physical Education and Sports Sciences">B.Sc (Hon) Physical Education and Sports Sciences</option>
+                <option value="B.Sc (Hon) Physical Science Computer Science">B.Sc (Hon) Physical Science Computer Science</option>
+                <option value="B.Sc (Hon) Physical Science with Chemistry">B.Sc (Hon) Physical Science with Chemistry</option>
+                <option value="B.Sc (Hon) Physical Science with Computer">B.Sc (Hon) Physical Science with Computer</option>
+                <option value="B.Sc (PEHES)">B.Sc (PEHES)</option>
+                <option value="B.Sc. (MT) Radiography">B.Sc. (MT) Radiography</option>
+      
+      
+      
+            </select>
+        </div>
+
+            <div class="col-10">
+                <input type="number" name="Science[][marks]" placeholder="marks"  class="form-control m-2">
+        </div>
+            
+            `;
+                document.getElementById('science').appendChild(div);
+                sci++
+        }
+      
+        /****** */
+        function addcommerce() {
+                
+          var div = document.createElement('div');
+          div.className = 'participante';
+          div.innerHTML = `<div class="col-10">
+          <select name="Commerce[][course]" id="" class="form-control m-2">
+            <option value="">commerce</option>
+                          
+            <option value="B.Com.">B.Com.</option>
+            <option value="B.Com. and B.com.(Hons.) (Compulsory Language Courses) in Punjabi">B.Com. and B.com.(Hons.) (Compulsory Language Courses) in Punjabi</option>
+            <option value="Philosophy Paper & Political Science Paper">Philosophy Paper & Political Science Paper</option>
+            <option value="B.Com. & Compensation Laws">B.Com. & Compensation Laws</option>
+            <option value="B.Com. (Hons.)">B.Com. (Hons.)</option>
+            <option value="B.Com. and B.Com.(Hons.) (Compulsory Language Courses) in Punjabi">B.Com. and B.Com.(Hons.) (Compulsory Language Courses) in Punjabi</option>
+            <option value="Philosophy Paper & Political Science Paper">Philosophy Paper & Political Science Paper</option>
+            <option value="B.Com. (Hons.) Corporate Laws">B.Com. (Hons.) Corporate Laws</option>
+      
+          </select>
+        </div>
+        <div class="col-10">
+                <input type="number" name="Commerce[][marks]" placeholder="marks"  class="form-control m-2">
+        </div>`;
+          document.getElementById('commerce').appendChild(div);
+          com++
+      }
+      /*****/
+      function addarts() {
+                
+        var div = document.createElement('div');
+        div.className = 'participante';
+        div.innerHTML = ` <div class="col-10">
+        
+        <select name="Arts[][course]" id="" class="form-control m-2">
+          <option value="">Arts</option>
+                          
+          <option value="B.A. Programme (Compulsory Language Courses) in Arabic">B.A. Programme (Compulsory Language Courses) in Arabic</option>
+          <option value="B.A. Programme (Discipline Courses) in Arabic">B.A. Programme (Discipline Courses) in Arabic</option>
+          <option value="B.A. Programme (Discipline Courses) in Buddhist Studies">B.A. Programme (Discipline Courses) in Buddhist Studies</option>
+          <option value="B.A. Programme (compulsory Language Course (Assamese, Bengali, etc.)">B.A. Programme (compulsory Language Course (Assamese, Bengali, etc.)</option>
+          <option value="B.A. Programme (Discipline Courses (Assamese, Bengali, etc.)">B.A. Programme (Discipline Courses (Assamese, Bengali, etc.)</option>
+          <option value="B.A. Programme (Discipline Courses) in Hindi">B.A. Programme (Discipline Courses) in Hindi</option>
+          <option value="B.A. Programme (Language Courses) in Hindi">B.A. Programme (Language Courses) in Hindi</option>
+          <option value="B.A. Programme (Discipline Courses) in Urdu">B.A. Programme (Discipline Courses) in Urdu</option>
+          <option value="B.A. Programme (Language Courses) in Urdu">B.A. Programme (Language Courses) in Urdu</option>
+          <option value="B.A. Programme (Language Courses) in Linguistics">B.A. Programme (Language Courses) in Linguistics</option>
+          <option value="B.A. Programme (Discipline Courses) in Statistics">B.A. Programme (Discipline Courses) in Statistics</option>
+          <option value="B.A. Programme (Discipline Courses) in Operational Research">B.A. Programme (Discipline Courses) in Operational Research</option>
+          <option value="B.A. Programme (Discipline and Application Courses) in music">B.A. Programme (Discipline and Application Courses) in music</option>
+          <option value="B.A. Programme (Discipline & Language Courses) in Persian">B.A. Programme (Discipline & Language Courses) in Persian</option>
+          <option value="B.A. Programme (Discipline Courses) in Philosophy">B.A. Programme (Discipline Courses) in Philosophy</option>
+          <option value="B.A Programme (Discipline courses) in Punjabi">B.A Programme (Discipline courses) in Punjabi</option>
+          <option value="B.A. Programme (Compulsory Language Courses) in Punjabi">B.A. Programme (Compulsory Language Courses) in Punjabi</option>
+          <option value="B.A. Programme (Discipline Courses ) in Sanskrit">B.A. Programme (Discipline Courses ) in Sanskrit</option>
+          <option value="B.A. Programme (Compulsory Language Courses) in Sanskrit">B.A. Programme (Compulsory Language Courses) in Sanskrit</option>
+          <option value="B.A. Programme (Discipline Courses) in Psychology">B.A. Programme (Discipline Courses) in Psychology</option>
+          <option value="B.A. Programme (Discipline Courses) in Mathematics">B.A. Programme (Discipline Courses) in Mathematics</option>
+          <option value="B.A. Programme (Application Courses) in Mathematics">B.A. Programme (Application Courses) in Mathematics</option>
+          <option value="B.A. Programme (Application and Discipline Courses) in Computer Science">B.A. Programme (Application and Discipline Courses) in Computer Science</option>
+          <option value="B.A. Programme (Discipline Courses) in Commerce">B.A. Programme (Discipline Courses) in Commerce</option>
+          <option value="B.A. Programme (Discipline Courses) in Physical Education">B.A. Programme (Discipline Courses) in Physical Education</option>
+          <option value="B.A. Programme (Application Courses) in Physical Education">B.A. Programme (Application Courses) in Physical Education</option>
+          <option value="B.A. Programme (Discipline Courses) in Home Science:- Food Technology, Apparel Design & Construction, Family and Child Welfare, Nutrition & Health Education">B.A. Programme (Discipline Courses) in Home Science:- Food Technology, Apparel Design & Construction, Family and Child Welfare, Nutrition & Health Education</option>
+          <option value="B.A. Programme (Application and Foundation Courses)">B.A. Programme (Application and Foundation Courses)</option>
+          <option value="B.A. (Programme) Discipline Course in French">B.A. (Programme) Discipline Course in French</option>
+          <option value="B.A. (Programme) Discipline Course in German">B.A. (Programme) Discipline Course in German</option>
+          <option value="B.A. (Programme) Discipline Course in Spanish">B.A. (Programme) Discipline Course in Spanish</option>
+          <option value="B.A. Programme (Discipline Courses) in Sociology">B.A. Programme (Discipline Courses) in Sociology</option>
+          <option value="B.A. Programme (Discipline Courses) in Geography">B.A. Programme (Discipline Courses) in Geography</option>
+          <option value="B.A. Programme (Discipline Courses) in Political Science">B.A. Programme (Discipline Courses) in Political Science</option>
+          <option value="B.A. Programme (Discipline Courses) in Economics">B.A. Programme (Discipline Courses) in Economics</option>
+          <option value="B.A. Programme (Discipline Courses) in History">B.A. Programme (Discipline Courses) in History</option>
+          <option value="B.A. Programme (Compulsory Language Courses) in English">B.A. Programme (Compulsory Language Courses) in English</option>
+          <option value="B.A. Programme (Discipline Courses) in English">B.A. Programme (Discipline Courses) in English</option>
+          <option value="B.A. Programme (Compulsory Language Course in Bengali) for course 'B' and 'C'">B.A. Programme (Compulsory Language Course in Bengali) for course 'B' and 'C'</option>
+          <option value="B.A. Programme (Compulsory Language Course in Tamil) for course 'B' and 'C'">B.A. Programme (Compulsory Language Course in Tamil) for course 'B' and 'C'</option>
+          <option value="B.A. Programme (Compulsory Language Course in Sindhi, Telugu, Assamese and Manipuri) for course 'B' and 'C'">B.A. Programme (Compulsory Language Course in Sindhi, Telugu, Assamese and Manipuri) for course 'B' and 'C'</option>
+          <option value="B.A. (Vocational Studies) Programme">B.A. (Vocational Studies) Programme</option>
+          <option value="B.A. Functional Hindi for Semester I">B.A. Functional Hindi for Semester I</option>
+          <option value="B.A. Programme (Discipline Courses) in Education">B.A. Programme (Discipline Courses) in Education</option>
+          </select>
+        </div>
+        <div class="col-10">
+                <input type="number" name="Arts[][marks]" placeholder="marks"  class="form-control m-2">
+        </div>`;
+        document.getElementById('arts').appendChild(div);
+        arts++
+      }
+        
+        
+      
+      
+      </script>
+</body>
+</html>

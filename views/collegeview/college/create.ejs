@@ -1,0 +1,209 @@
+<html lang="en">
+<%- include("../head.ejs") %>
+
+<body>
+  <%- include("../nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/server/college/create" method="POST">
+      <div class="quick">
+              <p>College Name</p>
+     
+
+        <select name="name" class="form-control" >
+          <option value="colloge">college</option>
+          <option value="Acharya Narendra Dev College">Acharya Narendra Dev College</option>
+          <option value="Ahilyabai College of Nursing">Ahilyabai College of Nursing</option>
+          <option value="Atma Ram Sanatan Dharma College">Atma Ram Sanatan Dharma College</option>
+          <option value="Aditi Mahavidyalaya">Aditi Mahavidyalaya</option>
+          <option value="Amar Jyoti Institute of Physiotherapy">Amar Jyoti Institute of Physiotherapy</option>
+          <option value="Ayurvedic & Unani Tibbia College">Ayurvedic & Unani Tibbia College</option>
+          <option value="Bhagini Nivedita College">Bhagini Nivedita College</option>
+          <option value="Bharati College">Bharati College</option>
+          <option value="Bhaskaracharya College of Applied Sciences">Bhaskaracharya College of Applied Sciences</option>
+          <option value="Bhim Rao Ambedkar College">Bhim Rao Ambedkar College</option>
+          <option value="College of Arts">College of Arts</option>
+          <option value="College of Vocational Studies">College of Vocational Studies</option>
+          <option value="Daulat Ram Colleg">Daulat Ram Colleg</option>
+          <option value="Delhi College of Arts & Commerce">Delhi College of Arts & Commerce</option>
+          <option value="Delhi College of Engineering">Delhi College of Engineering</option>
+          <option value="Delhi Institute of Pharmaceutical Sci & Research">Delhi Institute of Pharmaceutical Sci & Research</option>
+          <option value="Deshbandhu College">Deshbandhu College</option>
+          <option value="Deshbandhu College (Evening)">Deshbandhu College (Evening)</option>
+          <option value="Durgabai Deshmukh College of Special Education (Visual Impairment)">Durgabai Deshmukh College of Special Education (Visual Impairment)</option>
+          <option value="Dyal Singh College">Dyal Singh College</option>
+          <option value="Dyal Singh College (Evening)">Dyal Singh College (Evening)</option>
+          <option value="Gargi College">Gargi College</option>
+          <option value="Hans Raj College">Hans Raj College</option>
+          <option value="Hindu College">Hindu College</option>
+          <option value="Indira Gandhi Instt.of Phy. Edu. & Sports Sciences">Indira Gandhi Instt.of Phy. Edu. & Sports Sciences</option>
+          <option value="Indraprastha College for Women">Indraprastha College for Women</option>
+          <option value="Institute of Home Economics">Institute of Home Economics</option>
+          <option value="Janki Devi Memorial College">Janki Devi Memorial College</option>
+          <option value="Jesus & Mary College">Jesus & Mary College</option>
+          <option value="Kalindi College">Kalindi College</option>
+          <option value="Kamla Nehru College">Kamla Nehru College</option>
+          <option value="Keshav Mahavidyalaya">Keshav Mahavidyalaya</option>
+          <option value="Kirori Mal College">Kirori Mal College</option>
+          <option value="Lady Harding Medical College">Lady Harding Medical College</option>
+          <option value="Lady Irwin College">Lady Irwin College</option>
+          <option value="Lady Shri Ram College for Women">Lady Shri Ram College for Women</option>
+          <option value="Lakshmi Bai College">Lakshmi Bai College</option>
+          <option value="Maharaja Agrasen College">Maharaja Agrasen College</option>
+          <option value="Maharishi Valmiki College of Education">Maharishi Valmiki College of Education</option>
+          <option value="Maitreyi College">Maitreyi College</option>
+          <option value="Mata Sundri College for Women">Mata Sundri College for Women</option>
+          <option value="Maulana Azad Medical College">Maulana Azad Medical College</option>
+          <option value="Miranda House College">Miranda House College</option>
+          <option value="Moti Lal Nehru College">Moti Lal Nehru College</option>
+          <option value="Moti Lal Nehru College (Evening)">Moti Lal Nehru College (Evening)</option>
+          <option value="Nehru Homeopathic College">Nehru Homeopathic College</option>
+          <option value="Netaji Subhas Institute of Technology">Netaji Subhas Institute of Technology</option>
+          <option value="P.G.D.A.V. College">P.G.D.A.V. College</option>
+          <option value="P.G.D.A.V. College (Evening)">P.G.D.A.V. College (Evening)</option>
+          <option value="Pt. Deen Dayal Institute for - Physically Handicapped">Pt. Deen Dayal Institute for - Physically Handicapped</option>
+          <option value="Rajdhani College">Rajdhani College</option>
+          <option value="Rajkumari Amrit Kaur College of Nursing">Rajkumari Amrit Kaur College of Nursing</option>
+          <option value="Ram Lal Anand College">Ram Lal Anand College</option>
+          <option value="Ram Lal Anand College (Evening)">Ram Lal Anand College (Evening)</option>
+          <option value="Ramjas College">Ramjas College</option>
+          <option value="Satyawati College">Satyawati College</option>
+          <option value="Satyawati College (Evening)">Satyawati College (Evening)</option>
+          <option value="School of Open Learning">School of Open Learning</option>
+          <option value="School of Rehabilitation Sciences">School of Rehabilitation Sciences</option>
+          <option value="Shaheed Bhagat Singh College">Shaheed Bhagat Singh College</option>
+          <option value="Shaheed Bhagat Singh College (Evening)">Shaheed Bhagat Singh College (Evening)</option>
+          <option value="Shaheed Rajguru College of App.Sci. for Women">Shaheed Rajguru College of App.Sci. for Women</option>
+          <option value="Shaheed Sukhdev College of Business Studies">Shaheed Sukhdev College of Business Studies</option>
+          <option value="Shivaji College">Shivaji College</option>
+          <option value="Shri Ram College of Commerce">Shri Ram College of Commerce</option>
+          <option value="Shyam Lal College">Shyam Lal College</option>
+          <option value="Shyam Lal College (Evening)">Shyam Lal College (Evening)</option>
+          <option value="Shyama Prasad Mukherjee College">Shyama Prasad Mukherjee College</option>
+          <option value="Sri Aurbindo College">Sri Aurbindo College</option>
+          <option value="Sri Aurbindo College (Evening)">Sri Aurbindo College (Evening)</option>
+          <option value="Sri Guru Gobind Singh College of Commerce">Sri Guru Gobind Singh College of Commerce</option>
+          <option value="Sri Guru Nanak Dev Khalsa College">Sri Guru Nanak Dev Khalsa College</option>
+          <option value="Sri Guru Tegh Bahadur Khalsa College">Sri Guru Tegh Bahadur Khalsa College</option>
+          <option value="Sri Venkateswara College">Sri Venkateswara College</option>
+          <option value="St. Stephen's College">St. Stephen's College</option>
+          <option value="Swami Shraddhanand College">Swami Shraddhanand College</option>
+          <option value="University College of Med. Sc. And G.T.B. Hospital">University College of Med. Sc. And G.T.B. Hospital</option>
+          <option value="Vallabhbhai Patel Chest Institute">Vallabhbhai Patel Chest Institute</option>
+          <option value="Vivekanand College">Vivekanand College</option>
+          <option value="Zakir Husain College">Zakir Husain College</option>
+          <option value="Zakir Husain College (Evening)">Zakir Husain College (Evening)</option>
+          
+          
+        </select>
+      </div>
+
+      <div class="col">
+        <p>Also Known as</p>
+        <input type="text" class="form-control" name="also" class="form-control"  required>
+      </div>
+
+      <div class="col">
+        <p>campus </p>
+        <select name="campus" id="" class="form-control" required>
+          <option value="North Campus">North Campus</option>
+          <option value="South campus">South Campus</option>
+        </select>
+        </div>
+
+
+
+        <div class="col">
+          <p> exact -Address</p>
+          <input type="text" class="form-control" name="address" class="form-control" required >
+        </div>
+        <div class="col">
+          <p>Affilated</p>
+          <select name="affilated" id="" class="form-control" required>
+            <option value="Du">Du</option>
+          </select>
+        </div>
+
+        <div class="col">
+          <p>website link</p>
+            <input type="text" name="website" id="" class="form-control" required >
+        </div>
+        <div class="col">
+          <p>Logo</p>
+          <input type="file" name="logo" required>
+        </div>
+
+        <div class="form-row">
+          <div class="col">
+            <p>NIRF</p>
+            <input type="number" name="nirf" class="form-control" required>
+          </div>
+          <div class="col">
+            <p>NAAC</p>
+            <input type="text" name="naacs" class="form-control" required>
+          </div>
+        </div>
+
+              
+       
+
+        <div class="form-row">
+          <div class="col-10">
+                  <p>Admission mode</p>
+                  <input type="Text" name="Addmission[]"  class="form-control" placeholder="Admission" required> 
+                  </div>
+                  <div class="col-2">
+                    <button type="button" class="btn btn-warning" onclick="addinput()">+</button>     
+          </div>
+        </div>
+                 
+
+  
+                <div class="col-10" id="addmission">
+
+                </div>
+                
+  
+       
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  </div>
+  
+
+  
+  <script>
+ 
+    
+function addinput() {
+
+var div = document.createElement('div');
+div.className = 'participante';
+div.innerHTML = `<input type="Text" name="addmission[]"  class="form-control" placeholder="mode">`;
+document.getElementById('addmission').appendChild(div);
+
+
+}
+
+
+
+
+</script>
+</body>
+</html>

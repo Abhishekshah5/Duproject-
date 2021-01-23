@@ -1,0 +1,328 @@
+
+      <%- include("../home/head.ejs") %>
+      <link rel="stylesheet" href="/css/details/style.css">
+      <link rel="stylesheet" href="/css/details/blog.css">
+      <style>
+        .head{
+          font-weight: bold;
+          font-weight: bold;
+          background-color: cadetblue;
+          text-transform: capitalize;
+          
+        }
+      </style>
+        </head>  
+    <body>
+      <%- include("../home/nav.ejs") %>
+          
+              
+
+
+
+           <div class="container ok">
+            <div class="containeri">
+              <div class="wrapperi">
+                <a href="#"><img src="/images/hansraj.jpeg" alt=""></a>
+                <div class="titlei"><%= info[0].Name %></div>
+                <div class="place"><%= info[0].basic_info.campus %></div>
+              </div>
+        <div class="con">
+          <p><%- info[0].description %></p>
+        <div class="buttons">
+                  <div class="btni">
+                    <a href="#cutoff"><button class="cut">Cutoff</button></a>
+                  </div>
+        <div class="btni">
+          <a href="#course-offered"><button class="cou">Courese offered</button></a>
+                  </div>
+        </div>
+        </div>
+
+           </div>
+           
+         </div>  
+    
+
+                  
+             
+
+<!--content ---------------------------------------->
+
+
+
+             
+                
+         
+               
+           
+
+              
+<!---course offered-->
+              
+                
+              
+              
+               
+                 
+              
+            
+           
+           <!----->
+           <div class="container-fluid">
+             <div class="row">
+              <div class="col-lg-1"></div>
+               <div class="col-lg-8">
+                 <div class="container">
+                   <div class="heading">
+                    <h2>Cut-Off</h2>
+                   </div>
+                   <div class="cls">
+                     <form >
+                      <select name="year"  class="headi form-control">
+                        <option class="head" value=""> Year</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                      </select>
+                      <select name="categorey" id="" class="headi form-control">
+                        <option class="head" value=""> Select Categorey </option>
+                        <option value="Gen">General</option>
+                        <option value="SC">SC</option>
+                        <option value="ST">ST</option>
+                        <option value="OBC">OBC</option>
+                        <option value="EWS">EWS</option>
+                      </select>
+                      <button type="submit" formaction="/cutoff/KYC001" formmethod="post" class="btn btni btn-success btn-md ">Submit</button>
+                    </form>
+                    </div>
+                  </div> 
+                  <div class="row">
+                  <div class="col-lg-3 mb-4 col-md-2 col-sm-3">
+                    <div class="list-group" id="list-tab" role="tablist">
+                      <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="home">Round 1</a>
+                      <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Round 2</a>
+                      <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Round 3</a>
+                      <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Round 4</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-9 col-md-8 col-sm-12">
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                        <div class="container-fluid">                      
+                          <div class="container">
+                            <table class="table table-striped ">
+                              <tr >
+                                <th class="table-dark text-center w-50 ">Course</td>
+                                <th class="table-dark text-center w-50" >marks</td>                        
+                              </tr>
+                              <tr>
+                                <td class=" table-warning  head w-50 ">Insitution name</td>
+                                <td class=" text-center"><%= info[0].Name %></td>
+                                
+                              </tr>
+                            </table>
+                            
+          
+                          </div>
+    
+                        </div>
+
+
+
+
+                      </div>
+                      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        <div class="container">
+                      
+                          <div class="container">
+                            <table class="table table-striped ">
+                              <tr >
+                                <th class="table-dark text-center w-50 ">Course</td>
+                                <th class="table-dark text-center w-50" >marks</td>                        
+                              </tr>
+                              <tr>
+                                <td class=" table-warning  head w-50 ">Insitution name</td>
+                                <td class=" text-center"><%= info[0].Name %></td>
+                                
+                              </tr>
+                            </table>
+          
+                          </div>
+    
+                        </div>
+
+
+
+
+
+
+                      </div>
+                      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                        <div class="container">
+                      
+                          <div class="container">
+                            <table class="table table-striped ">
+                              <tr >
+                                <th class="table-dark text-center w-50 ">Course</td>
+                                <th class="table-dark text-center w-50" >marks</td>                        
+                              </tr>
+                              <tr>
+                                <td class=" table-warning  head w-50 ">Insitution name</td>
+                                <td class=" text-center"><%= info[0].Name %></td>
+                                
+                              </tr>
+                            </table>
+          
+                          </div>
+    
+                        </div>
+
+
+
+                      </div>
+                      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+
+                        <div class="container">
+                      
+                          <div class="container">
+                            <table class="table table-striped ">
+                              <tr >
+                                <th class="table-dark text-center w-50 ">Course</td>
+                                <th class="table-dark text-center w-50" >marks</td>                        
+                              </tr>
+                              <tr>
+                                <td class=" table-warning  head w-50 ">Insitution name</td>
+                                <td class=" text-center"><%= info[0].Name %></td>
+                                
+                              </tr>
+                            </table>
+          
+                          </div>
+    
+                        </div>
+
+
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            
+            <div class="col-lg-3">
+
+            </div>
+
+         </div>
+       </div>
+              
+
+              <div class="container-fluid m-2">
+                <div class="heading">
+                  <h2>Know-more</h2>
+                 </div>
+                <div class="row">
+                  
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="blog-card ">
+                    <div class="meta">
+                      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+                      
+                    </div>
+                    <div class="description">
+                      <h1>Shri ram College </h1>
+                        
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                        <p class="read-more">
+                          <a href="#"><button class=" btn btn-success">click-more</button></a>
+                        </p>
+                    </div>
+                  </div>
+
+                  
+                  
+
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="blog-card ">
+                    <div class="meta">
+                      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+                      
+                    </div>
+                    <div class="description">
+                      <h1>Shri ram College </h1>
+                        
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                      <p class="read-more">
+                        <a href="#"><button class=" btn btn-success">click-more</button></a>
+                      </p>
+                    </div>
+                  </div>
+
+                  
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="blog-card  alt">
+                    <div class="meta">
+                      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+                      
+                    </div>
+                    <div class="description">
+                      <h1>Shri ram College </h1>
+                        
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                      <p class="read-more">
+                        <a href="#"><button class=" btn btn-success">click-more</button></a>
+                      </p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="blog-card  alt">
+                    <div class="meta">
+                      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+                      
+                    </div>
+                    <div class="description">
+                      <h1>Shri ram College </h1>
+                        
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                      <p class="read-more">
+                        <a href="#"><button class=" btn btn-success">click-more</button></a>
+                      </p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="blog-card  alt">
+                    <div class="meta">
+                      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+                      
+                    </div>
+                    <div class="description">
+                      <h1>Shri ram College </h1>
+                        
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+                      <p class="read-more">
+                        <a href="#"><button class=" btn btn-success">click-more</button></a>
+                      </p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              </div>
+              
+             
+                
+
+               
+              <%- include("../home/footer.ejs") %>            
+
+                  
